@@ -26,9 +26,7 @@ const DATABASE_URL = process.env.DATABASE_URL;
 const options = { useNewUrlParser: true, useUnifiedTopology: true }
 mongoose
   .connect(DATABASE_URL, options)
-  .then(() => app.listen({port: process.env.PORT || 4000}).then(({url}) => {
-    console.log(`Server is ready at ${url}`);
-}))
+  .then(() => app.listen({port: process.env.PORT || 4000}, console.log(`Server is ready at ${url}`)))
   .catch(error => {
     throw error
   })
