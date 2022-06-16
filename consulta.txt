@@ -1,0 +1,23 @@
+ {
+  post(name: "Ninja") 
+  {
+    _id
+      name
+      rarity
+      faction
+      rating
+      type
+      element
+      stats{
+        health
+      attack
+      defense
+      criticalRate
+      criticalDamage
+      speed
+      resistance
+      accuracy
+      }
+     
+        }
+}
